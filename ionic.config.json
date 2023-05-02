@@ -1,0 +1,8 @@
+{
+  "name": "Veloti",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

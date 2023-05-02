@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons  slot="start">
+      <ion-back-button></ion-back-button> 
+    </ion-buttons>
+    <ion-title>Ochagavia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img class="img" src="assets/easy.jpeg"></ion-img>
+  <h4 class="direccion">Av. José Joaquín Prieto 5531, Santiago, Pedro Aguirre Cerda, Región Metropolitana</h4>
+
+  <div *ngFor="let data of data">
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle> Nombre: {{this.data.nombre}}</ion-card-subtitle>
+        <ion-card-subtitle> Precios: {{this.data.precio}}</ion-card-subtitle>
+        <ion-card-subtitle> Stock: {{this.data.stock}}</ion-card-subtitle>
+        <ion-card-subtitle> Descripcion: {{this.data.descripcion}}</ion-card-subtitle>
+      </ion-card-header>
+      </ion-card>
+  </div>
+  <div>
+    
+    <ion-button id="open-modal" expand="block">Actualizar</ion-button>
+    <ion-modal #modal trigger="open-modal">
+      <ng-template>
+        <ion-content> 
+          <ion-toolbar>
+            <ion-title>Nuevos datos</ion-title>
+            <ion-buttons slot="end">
+              <ion-button color="light" (click)="modal.dismiss()">Volver</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+          <ion-list lines="none">
+  
+            <ion-item class="form-field">
+              <input   [(ngModel)]="productos.nombre" class="text-input"placeholder=""/>
+              <label class="label">Nombre</label>
+    
+             </ion-item>
+  
+  
+            <ion-item class="form-field">
+              <input  type="number" [(ngModel)]="productos.precio" class="text-input"placeholder=""/>
+              <label class="label">Precios</label>
+    
+             </ion-item>
+    
+    
+             <ion-item class="form-field">
+              <input  type="number" [(ngModel)]="productos.stock" class="text-input"placeholder=""/>
+              <label class="label">Stock</label>
+    
+             </ion-item>
+    
+             <ion-item class="form-field">
+              <input   [(ngModel)]="productos.descripcion" class="text-input"placeholder=""/>
+              <label class="label">Descripcion</label>
+    
+             </ion-item>
+    
+    
+             <ion-item class="itemInput">
+    
+              <ion-buttons slot="end">
+                <ion-label>Guardar</ion-label>
+               <ion-button (click)="save_easy_costanera()">
+                  <ion-icon slot="icon-only" name="save-sharp"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+    
+             </ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </div>
+  
+</ion-content>

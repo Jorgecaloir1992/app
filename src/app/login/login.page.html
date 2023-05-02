@@ -1,0 +1,29 @@
+<ion-content class="ion-padding">
+  <h1>Bienvenidos,</h1>
+  <h3>Continue iniciando sesion.</h3>
+  <ion-item>
+  
+    <ion-img class="img" src="assets/veloti.jpeg" ></ion-img>
+    
+  
+</ion-item>
+
+  <form>
+    <div class="form-field">
+      <input [(ngModel)]="credenciales.email" name="email" class="text-input" placeholder=""/>
+      <label class="label">Email</label>
+    </div>
+    <div class="form-field">
+      <input [(ngModel)]="credenciales.password" name="email" type="password" class="text-input" placeholder=""/>
+      <label class="label">password</label>
+    </div>
+    <a routerLink="#" class="forgot-password-link">Cambiar Contraseña</a>
+
+    <app-button (click)="login()" label='Iniciar'></app-button>
+    
+  </form>
+
+  <p class="footer-text">Nuevo Usuario, <a routerLink="/register">Registrar</a></p>
+</ion-content>
+
+

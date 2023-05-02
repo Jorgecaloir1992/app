@@ -1,0 +1,72 @@
+
+<ion-header>
+  <ion-toolbar class=""> 
+    <ion-buttons  slot="start">
+      <ion-menu-button class="btn-menu"></ion-menu-button> 
+    </ion-buttons>
+
+    <ion-content ></ion-content>
+    <ion-title>Productos</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div>
+      <ion-card>
+
+          <ion-item class="itemInput" >
+
+           <ion-label position="stacked" > nombre</ion-label>
+           <ion-input [(ngModel)]="productos.nombre" ></ion-input>
+
+          </ion-item>
+
+
+          <ion-item class="itemInput">
+
+            <ion-label position="stacked" > precio</ion-label>
+            <ion-input type="number" [(ngModel)]="productos.precio" ></ion-input>
+ 
+           </ion-item>
+ 
+ 
+           <ion-item class="itemInput">
+
+            <ion-label position="stacked" > stock</ion-label>
+            <ion-input type="number" [(ngModel)]="productos.stock" ></ion-input>
+ 
+           </ion-item>
+
+           <ion-item class="itemInput">
+
+            <ion-label position="stacked" > descripcion</ion-label>
+            <ion-input [(ngModel)]="productos.descripcion" ></ion-input>
+ 
+           </ion-item>
+
+
+           <ion-item class="itemInput">
+
+            <ion-buttons slot="end">
+              <ion-label>guardar</ion-label>
+             <ion-button (click)="save()">
+                <ion-icon slot="icon-only" name="save-sharp"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+ 
+           </ion-item>
+
+      </ion-card>>
+  </div>
+  <div>
+
+
+  </div>
+
+  
+  
+
+</ion-content>

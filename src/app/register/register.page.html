@@ -1,0 +1,17 @@
+<ion-content class="ion-padding">
+  <h1>Crear cuenta,</h1>
+  <h3>Regístrate para empezar!</h3>
+
+    
+
+  <form >
+    <app-input  name="nombre"           label="Nombre Completo"></app-input>
+    <app-input  name="email"            label="Email"></app-input>
+    <app-input  name="password"         label="Password" type="password"></app-input>
+
+    <app-button (click)="registrar()" label='Registar'></app-button>
+    
+  </form>
+
+  <p class="footer-text">Ya soy miembro, <a routerLink="/login">Iniciar</a></p>
+</ion-content>

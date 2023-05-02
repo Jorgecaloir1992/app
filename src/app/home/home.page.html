@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar class=""> 
+    <ion-buttons  slot="start">
+      <ion-menu-button class="btn-menu"></ion-menu-button> 
+    </ion-buttons>
+
+    <ion-title>Home</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content class="contenido">
+    <ion-list lines="none" class="container">
+      
+      <ion-item class="item">
+        <button ion-button (click)="easy()" class="easy"></button>
+      </ion-item>
+
+      <ion-item class="item">
+        <button ion-button (click)="sodimac()" class="sodimac"></button>
+      </ion-item>
+
+      <ion-item class="item">
+        <button ion-button (click)="construmart()" class="construmart"></button>
+      </ion-item>
+      
+      <ion-item class="item">
+        <button ion-button (click)="chilemat()" class="culote"></button>
+      </ion-item>
+
+      <ion-item class="item">
+        <button ion-button (click)="casaroyal()" class="casaroyal"></button>
+      </ion-item>
+
+      <ion-item>
+        <button ion-button (click)="mts()" class="mts"></button>
+      </ion-item>
+
+      <ion-item>
+        <button ion-button (click)="yolito()" class="yolito"></button>
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)="imperial()" class="imperial"  ></button>
+      </ion-item>
+      
+      <ion-content class="ion-padding">
+        <ion-button [routerLink]="['/newItem']">Go to detail</ion-button>
+      </ion-content>
+          </ion-list>
+  </ion-content>
+  
